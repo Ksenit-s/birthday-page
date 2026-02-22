@@ -542,6 +542,10 @@ body::after {
     z-index: 100 !important;
 }
 
+.congrat-note.note22 {
+    width: 300px !important;
+}
+
 .congrat-note.note30 {
     height: 360px !important;
 }
@@ -609,22 +613,15 @@ body::after {
 
 .congrat-note.note43 {
     position: absolute !important;
-    top: 9460px !important;    /* расстояние от верхнего края */
-    left: 360px !important;   /* расстояние от левого края */
-    width: 600px !important;  /* фиксированная ширина */
-    height: 270px !important;
+    top: 9910px !important;    /* расстояние от верхнего края */
+    left: 30px !important;   /* расстояние от левого края */
+    width: 300px !important;  /* фиксированная ширина */
+    height: 340px !important;
     z-index: 100 !important;
 }
 
-.congrat-note.note45 {
-    position: absolute !important;
-    top: 10200px !important;
-    width: 600px !important;
-    height: 300px !important;
-}
-
 .congrat-note.note46 {
-    height: 420px !important;
+    height: 400px !important;
 }
 
 .congrat-note.note47 {
