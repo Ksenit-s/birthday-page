@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Comic+Neue:wght@700&family=Patrick+Hand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1"></script>
 </head>
 <body>
     <!-- Элементы стенгазеты: уголки, скрепки -->
@@ -83,14 +84,15 @@
         <span class="icon">🎵</span>
         <span class="text">Включить музыку перед чтением</span>
         <span class="icon">🎵</span>
-        <audio controls>
+        <audio id="birthdaySong" controls onplay="startConfetti30()">
   <source src="Music.mp3" type="audio/mpeg">
-  <source src="Music.mp3" type="audio/ogg">
   Твой браузер не поддерживает аудио элемент.
 </audio>
     </button>
     <div class="music-note">♪ Нажми, чтобы создать атмосферу ♪</div>
 </div>
+        <!-- Подключаем конфетти -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1"></script>
 
         <!-- Колонка поздравлений -->
         <section class="congratulations-column">
@@ -1234,5 +1236,36 @@
     </div>
 
     <script src="script.js"></script>
+         <script>
+// Глобальная функция для запуска конфетти на 30 секунд
+function startConfetti30() {
+    console.log("Конфетти запущено!"); // для отладки
+    const endTime = Date.now() + 30000; // 30 секунд
+
+    function frame() {
+        // Конфетти с двух сторон
+        confetti({
+            particleCount: 3,
+            angle: 60,
+            spread: 55,
+            origin: { x: 0, y: 0.5 },
+            colors: ['#FFD700', '#FF6B8B', '#4FC3F7', '#4CAF50', '#FF9800']
+        });
+        confetti({
+            particleCount: 3,
+            angle: 120,
+            spread: 55,
+            origin: { x: 1, y: 0.5 },
+            colors: ['#FFD700', '#FF6B8B', '#4FC3F7', '#4CAF50', '#FF9800']
+        });
+
+        if (Date.now() < endTime) {
+            requestAnimationFrame(frame);
+        }
+    }
+    frame();
+}
+</script>
 </body>
+
 </html>
