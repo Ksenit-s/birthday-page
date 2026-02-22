@@ -1468,4 +1468,69 @@ body::after {
     .congrats-container {
         display: block !important;
     }
+
+}
+
+/* ===== АДАПТАЦИЯ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ ===== */
+@media (max-width: 768px) {
+    
+    /* Секция с музыкой */
+    .music-section {
+        width: 100%;
+        padding: 10px;
+        margin: 20px 0;
+        box-sizing: border-box;
+    }
+    
+    /* Кнопка на телефоне */
+    .vintage-music-button {
+        width: 100% !important; /* Растягиваем на всю ширину */
+        max-width: 100%;
+        padding: 12px 10px !important;
+        display: flex;
+        flex-direction: column; /* Элементы друг под другом */
+        align-items: center;
+        gap: 10px;
+        margin: 0 auto;
+    }
+    
+    /* Текст кнопки */
+    .vintage-music-button .text {
+        font-size: 1.2rem !important;
+        white-space: normal; /* Разрешаем перенос текста */
+        word-break: break-word;
+        text-align: center;
+        line-height: 1.3;
+    }
+    
+    /* Аудиоплеер внутри кнопки */
+    .vintage-music-button audio {
+        width: 100% !important;
+        max-width: 280px; /* Ограничиваем ширину плеера */
+        height: 40px;
+        margin-top: 5px;
+    }
+    
+    /* Иконки */
+    .vintage-music-button .icon {
+        font-size: 1.5rem !important;
+    }
+    
+    /* Текст под кнопкой */
+    .music-note {
+        font-size: 1rem !important;
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+/* Для совсем маленьких экранов */
+@media (max-width: 480px) {
+    .vintage-music-button audio {
+        max-width: 240px;
+    }
+    
+    .vintage-music-button .text {
+        font-size: 1rem !important;
+    }
 }
