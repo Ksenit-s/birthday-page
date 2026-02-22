@@ -1449,6 +1449,11 @@ body::after {
 @media (max-width: 768px) {
     /* Отключаем абсолютное позиционирование на мобильных */
     .congrat-note.note33,
+    .congrat-note.note10,
+    .congrat-note.note11,
+    .congrat-note.note16,
+    .congrat-note.note21,
+    .congrat-note.note7,
     .congrat-note.note34,
     .congrat-note.note52,
     .congrat-note.note35,
@@ -1534,3 +1539,4 @@ body::after {
         font-size: 1rem !important;
     }
 }
+
