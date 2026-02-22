@@ -1450,7 +1450,10 @@ body::after {
     /* Отключаем абсолютное позиционирование на мобильных */
     .congrat-note.note33,
     .congrat-note.note34,
+    .congrat-note.note52,
     .congrat-note.note35,
+    .congrat-note.note43,
+    .congrat-note.note36,
     .congrat-note.note31 {
         position: relative !important;
         top: auto !important;
